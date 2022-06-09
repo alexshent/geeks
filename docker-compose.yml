@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+# -------------------------
+    mysqldb:
+        container_name: mysqlserver
+        image: mysql
+        restart: "no"
+        environment:
+            MYSQL_ROOT_PASSWORD: 1
+            MYSQL_DATABASE: app_db
+            MYSQL_USER: db_user
+            MYSQL_PASSWORD: 1
+        volumes:
+            - ./mysql/:/var/lib/mysql/
+# -------------------------
+    phpmyadmin:
+        image: phpmyadmin:5.1.3
+        container_name: phpmyadm513
+        ports:
+            - "8001:80"
+        restart: "no"
+        environment:
+            PMA_HOST: mysqldb
+        depends_on:
+            - mysqldb
+
