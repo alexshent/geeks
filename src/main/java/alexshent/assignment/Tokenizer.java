@@ -1,9 +1,6 @@
 package alexshent.assignment;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,31 +8,10 @@ import java.util.regex.Pattern;
  * Arithmetic expression tokenizer
  */
 public class Tokenizer {
-    private static final Set<Character> numberSet = new HashSet<>();
-    private static final Set<Character> operatorsSet = new HashSet<>();
-    private static final Set<Character> bracketsSet = new HashSet<>();
 
-    static {
-        numberSet.add('0');
-        numberSet.add('1');
-        numberSet.add('2');
-        numberSet.add('3');
-        numberSet.add('4');
-        numberSet.add('5');
-        numberSet.add('6');
-        numberSet.add('7');
-        numberSet.add('8');
-        numberSet.add('9');
-        numberSet.add('.');
-
-        operatorsSet.add('+');
-        operatorsSet.add('-');
-        operatorsSet.add('/');
-        operatorsSet.add('*');
-
-        bracketsSet.add('(');
-        bracketsSet.add(')');
-    }
+    private static final Character[] numbers = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.' };
+    private static final Character[] operators = { '+', '-', '*', '/' };
+    private static final Character[] brackets = { '(', ')' };
 
     /**
      * Break arithmetic expression into tokens
@@ -47,10 +23,10 @@ public class Tokenizer {
         StringBuilder number = new StringBuilder();
         boolean isLastCharOperator = true;
         for (char c : expression.toCharArray()) {
-            if (numberSet.contains(c) || (c == '-' && isLastCharOperator)) {
+            if (Arrays.asList(numbers).contains(c) || (c == '-' && isLastCharOperator)) {
                 number.append(c);
                 isLastCharOperator = false;
-            } else if (operatorsSet.contains(c) || bracketsSet.contains(c)) {
+            } else if (Arrays.asList(operators).contains(c) || Arrays.asList(brackets).contains(c)) {
                 if (!number.isEmpty()) {
                     result.add(number.toString());
                     number.setLength(0);
@@ -93,7 +69,7 @@ public class Tokenizer {
         boolean isLastCharOperator = false;
         List<String> tokens = tokenize(expression);
         for (String token : tokens) {
-            if (token.length() == 1 && operatorsSet.contains(token.charAt(0))) {
+            if (token.length() == 1 && Arrays.asList(operators).contains(token.charAt(0))) {
                 if (isLastCharOperator) {
                     return false;
                 }

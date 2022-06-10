@@ -76,7 +76,6 @@ public class Parser {
         List<String> result = new ArrayList<>();
         Stack<String> stack = new Stack<>();
 
-        // For each token
         for (String token : inputTokens) {
             // If token is an operator
             if (isOperator(token)) {
