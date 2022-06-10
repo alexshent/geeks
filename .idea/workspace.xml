@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="997e1397-4e55-4ef3-91e4-8b290248756c" name="Changes" comment="javafx application">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alexshent/assignment/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
+    <list default="true" id="997e1397-4e55-4ef3-91e4-8b290248756c" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alexshent/assignment/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alexshent/assignment/Tokenizer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654775824753</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="javafx application">
+      <created>1654775980401</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654775980401</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <created>1654776007593</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654776007593</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +222,7 @@
     <MESSAGE value="Arithmetic expression tokenizer and parser" />
     <MESSAGE value="Arithmetic expression DAO" />
     <MESSAGE value="javafx application" />
-    <option name="LAST_COMMIT_MESSAGE" value="javafx application" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
